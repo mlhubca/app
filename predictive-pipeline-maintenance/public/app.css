@@ -1,0 +1,14 @@
+body {
+  margin: 8px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#index-page
+{
+  text-align: center;
+}
+
+.setting-input {
+  font-size: 14px;
+  width:60%;
+}

@@ -1,0 +1,8 @@
+
+cd /Users/edong/data/dev/mlhubca/app/ml-digit-pad
+npm install (install modules)
+npm start (start the app)
+Control+C (stop the app)
+
+http://localhost:30000
+
