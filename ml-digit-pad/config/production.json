@@ -1,0 +1,15 @@
+{
+  "port": 3000,
+  "appname": "ML Digit Pad",
+  "description": "Demonstrating handwritten digit image recognition powered by machine learning",
+  "wml_credentials": [
+    {
+      "url": "https://ibm-watson-ml.mybluemix.net",
+      "access_key": "rRV3XZe02lk92zSQuRYbPjEPSSHF1nr9quYYBMls/ZiKwuh2Q6CULZtJAIqeiqj5wHxGxQ3pIogjgEOjN0TGDTcL0h32gVzPkwMbmHXNpi+FQYUqQmv73SQJrb1WXWeZv",
+      "username": "7b2ea9db1-6863-4ab3-b7b6-c9b9c2d6ccf0",
+      "password": "c09865da2-2291-4447-987c-db5bd74e9c1d",
+      "instance_id": "6c2700e03-8f76-4359-8487-a86fe67c6b7b"
+    }
+  ],
+  "scoring_url": "https://ibm-watson-ml.mybluemix.net/v3/wml_instances/6c2700e0-8f76-4359-8487-a86fe67c6b7b/published_models/ff3f44a5-6643-497f-b51f-28c4dcafdfb3/deployments/a7eb3b20-865c-437a-b5f2-73360cb3329a/online"
+}

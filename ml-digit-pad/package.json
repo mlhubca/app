@@ -1,0 +1,24 @@
+{
+  "name": "ml-digit-pad",
+  "version": "0.0.3",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --harmony server.js"
+  },
+  "dependencies": {
+    "express": "~3.0.1",
+    "ejs": "~0.8.3",
+    "ejs-locals": "~1.0.2",
+    "request": "*",
+    "signature_pad": "*",
+    "xmlhttprequest": "*",
+    "btoa": "*",
+    "sharp": "*"
+  },
+  "subdomain": "ml-digit-pad",
+  "engines": {
+    "node": ">=0.8.x"
+  }
+}

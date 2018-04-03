@@ -1,0 +1,6 @@
+applications:
+- name: ML Digit Pad
+  memory: 128M
+  command: node --harmony server.js
+  env:
+    NODE_ENV: production

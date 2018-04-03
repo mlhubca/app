@@ -1,0 +1,54 @@
+<% layout( 'layout' ) -%>
+
+<script>
+$(function() {
+	$('.settings').click(function() {
+		$(".settings-section").toggle();
+
+		if ($(".settings-section").is(":visible")) {
+			$('.settings').text("Settings <");
+		}
+		else {
+			$('.settings').text("Settings >");
+		}
+	});
+});
+</script>
+
+<div id="index-page">
+	<h1 id="page-title"><%= title %></h1>
+	<legend><%= description %></legend>
+	</br>
+
+	<div id="signature-pad" class="signature-pad">
+		<div class="signature-pad--body">
+				<canvas></canvas>
+		</div>
+		</br>
+		<div class="signature-pad--footer">
+			<div id="result" class="description">Draw a digit above</div>
+		</div>
+		</br> </br>
+		<div>
+				<button type="button" class="pure-button pure-button-primary" data-action="predict">Predict</button>
+				<button type="button" class="pure-button pure-button-primary" data-action="clear">Clear</button>
+		</div>
+	</div>
+	</br> </br>
+
+	<p>
+		<a href="#" class="settings">Settings ></a>
+	</p>
+	<div class="settings-section" style="display: none;">
+		<div>
+			 <textarea id="credential" class="pure-input-1 setting-input" placeholder="Watson Machine Learning Service Credential"></textarea>
+		</div>
+		</br>
+		<div>
+		<textarea id="scoring_url" class="pure-input-1 setting-input" placeholder="Scoring End-point"></textarea>
+		</div>
+	</div>
+
+	<script src="/public/signature_pad.js"></script>
+	<script src="/public/app.js"></script>
+</div>
