@@ -1,0 +1,74 @@
+<% layout( 'layout' ) -%>
+
+	<script>
+		$(function() {
+			$('.settings').click(function() {
+				$(".settings-section").toggle();
+
+				if ($(".settings-section").is(":visible")) {
+					$('.settings').text("Settings <");
+				} else {
+					$('.settings').text("Settings >");
+				}
+			});
+		});
+	</script>
+
+	<div id="index-page">
+		<h1 id="page-title"><%= title %></h1>
+		<legend>
+			<%= description %>
+		</legend>
+		</br>
+
+		<div class="pure-controls-group">
+
+			<div>
+				<form id="upload-widget" method="post" action="/upload" class="dropzone">
+					<div class="fallback">
+						<input name="file" type="file" />
+					</div>
+				</form>
+			</div>
+			</br>
+			<div>
+				<div id="result"></div>
+			</div>
+			<p>
+				<a href="#" class="settings">Settings ></a>
+			</p>
+			<div class="settings-section" style="display: none;">
+				<div>
+					<input id="api_key" class="pure-input-1 setting-input" type="text" placeholder="Watson Visual Recognition API Key"></input>
+				</div>
+				</br>
+				<div>
+					<input id="model_id" class="pure-input-1 setting-input" type="text" placeholder="Model ID"></input>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<link rel='stylesheet' href='/public/dropzone.css' />
+	<script type="text/javascript" src="/public/dropzone.js"></script>
+	<script type="text/javascript">
+		Dropzone.options.uploadWidget = {
+			paramName: 'file',
+			maxFilesize: 20, // MB
+			maxFiles: 100,
+			dictDefaultMessage: 'Drag an image here to upload, or click to select one',
+			acceptedFiles: 'image/*',
+			init: function() {
+				this.on('success', function(file, resp) {
+					console.log(file);
+					console.log(resp);
+					document.getElementById("result").innerHTML = resp.class + " (score: " + resp.score + ")";
+				});
+				this.on('thumbnail', function(file) {
+				});
+			},
+			accept: function(file, done) {
+				 return done();
+			}
+		};
+	</script>

@@ -1,0 +1,13 @@
+{
+  "port": 3002,
+  "appname": "Vehicle Damage Classifier",
+  "description": "Identifying various classes of vehicle damage issues by using machine learning techniques",
+  "service_credentials": [
+    {
+      "url": "https://gateway-a.watsonplatform.net/visual-recognition/api",
+      "note": "It may take up to 5 minutes for this key to become active",
+      "api_key": "f83b2812f4b7a0aca54dbd1b4a2b636bbddf2d88"
+    }
+  ],
+  "model_id": "VehicleDamage_273486676"
+}
