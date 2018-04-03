@@ -1,4 +1,4 @@
-
+# Handwritten Digit Image Recognition using Neural Nets
 
 1. Create a neural nets training definition using the "Single Convolution layer on MNIST" sample in SPSS Modeler
 
