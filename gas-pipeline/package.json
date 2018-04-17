@@ -1,0 +1,21 @@
+{
+  "name": "gas-pipeline",
+  "version": "0.0.3",
+  "private": true,
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --harmony server.js"
+  },
+  "dependencies": {
+    "express": "~4.x",
+    "ejs": "~2.5.5",
+    "ejs-locals": "~1.0.2",
+    "body-parser": "*",
+    "watson-developer-cloud": "*"
+  },
+  "subdomain": "gas-pipeline",
+  "engines": {
+    "node": ">=0.12.x"
+  }
+}

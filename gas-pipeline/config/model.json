@@ -1,0 +1,7 @@
+{
+  "model-input": [
+    {"id": 0, "name": "Normal", "manufacturer": "Picture 1", "img": "/public/1.jpg"},
+    {"id": 1, "name": "Normal", "manufacturer": "Picture 2", "img": "/public/9.jpg"},
+    {"id": 2, "name": "Normal", "manufacturer": "Picture 3", "img": "/public/7.jpg"}
+  ]
+}
