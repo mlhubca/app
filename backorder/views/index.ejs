@@ -1,0 +1,117 @@
+<% layout( 'layout' ) -%>
+
+	<script>
+		$("document").ready(function() {
+
+			// animate the progress bar onload
+			$('.progress_bar').each(function() {
+				var possbility = parseInt(this.title, 10);
+				if (possbility >= 50) {
+					$(this).attr('style', 'background:red');
+				} else {
+					$(this).attr('style', 'background:blue');
+				}
+				$(this).animate({
+					width: this.title
+				}, {
+					duration: 1000,
+					step: function(current) {
+						$(this).html(parseInt(current, 10) + '%')
+					}
+				});
+			});
+		});
+
+		$(function() {
+			$('.settings').click(function() {
+				$(".settings-section").toggle();
+
+				if ($(".settings-section").is(":visible")) {
+					$('.settings').text("Settings <");
+				} else {
+					$('.settings').text("Settings >");
+				}
+			});
+		});
+
+		$(function() {
+			$('.button-predict').click(function() {
+
+				// var credential = document.getElementById("credential").value;
+				// var scoring_url = document.getElementById("scoring_url").value;
+				var product_id = this.id;
+
+				var request = $.ajax({
+					url: "predict",
+					type: "POST",
+					data: {
+						product_id: product_id,
+						// credential: credential,
+						// scoring_url: scoring_url
+					},
+					dataType: "json"
+				});
+
+				request.done(function(json) {
+					var progress_bar_id = "#progress_bar-" + product_id;
+					var possbility = Math.round(json.result['probability'].values[1] * 100);
+
+					$(progress_bar_id).attr('style', "width: 0%");
+					if (possbility >= 50) {
+						$(progress_bar_id).attr('style', 'background:red');
+					} else {
+						$(progress_bar_id).attr('style', 'background:blue');
+					}
+
+					$(progress_bar_id).animate({
+						width: possbility + '%'
+					}, {
+						duration: 1000,
+						step: function(current) {
+							$(this).html(parseInt(current, 10) + '%')
+						}
+					});
+				});
+
+				request.fail(function(jqXHR, textStatus) {
+					alert("Request failed: " + textStatus);
+				});
+			});
+		});
+	</script>
+
+	<div class="banner">
+		<h1 class="banner-head">
+		        Inventory Backorder Prediction<br>
+
+		    </h1>
+	</div>
+
+	<div class="l-content">
+		<div class="simple-tables pure-g">
+
+			<% products.forEach( function( product ){ %>
+				<div class="pure-u-1 pure-u-md-1-3">
+					<div class="simple-table simple-table-free">
+						<div class="simple-table-header">
+							<h2><%= product.manufacturer %></h2>
+							<img class="simple-table-img" src="<%= product.img %>">
+							<span class="simple-table-price">
+											<span><%= product.name %></span>
+							</span>
+						</div>
+
+						<ul class="simple-table-list">
+							<li>Possibility of Backorder
+								<div class="progress_container">
+									<div id="progress_bar-<%= product.id %>" class="progress_bar tip" title="<%=product.score %>%">0</div>
+								</div>
+							</li>
+						</ul>
+
+						<button id="<%= product.id %>" class="button-predict pure-button">Predict</button>
+					</div>
+				</div>
+				<% }) %>
+		</div>
+	</div>
