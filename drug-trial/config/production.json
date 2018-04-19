@@ -1,0 +1,15 @@
+{
+  "port": 3004,
+  "appname": "Predicting the Best Drug",
+  "description": "A demo app to predict the correct type of drug for a patient based on various health metrics.",
+  "wml_credentials": [
+    {
+      "url": "https://ibm-watson-ml.mybluemix.net",
+      "access_key": "rRV3XZe2lk92zSQuRYbPjEPSSHF1nr9quYYBMls/ZiKwuh2Q6CULZtJAIqeiqj5wHxGxQ3pIogjgEOjN0TGDTcL0h32gVzPkwMbmHXNpi+FQYUqQmv73SQJrb1WXWeZv",
+      "username": "7b2ea9db-6863-4ab3-b7b6-c9b9c2d6ccf0",
+      "password": "c09865da-2291-4447-987c-db5bd74e9c1d",
+      "instance_id": "6c2700e0-8f76-4359-8487-a86fe67c6b7b"
+    }
+  ],
+  "scoring_url": "https://ibm-watson-ml.mybluemix.net/v3/wml_instances/6c2700e0-8f76-4359-8487-a86fe67c6b7b/published_models/a3ce1779-cd3f-4a0d-a080-ea850a6bc03f/deployments/cc78f805-db62-46d1-bc54-b382149236cb/online",
+}

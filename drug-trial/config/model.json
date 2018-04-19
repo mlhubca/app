@@ -1,0 +1,15 @@
+{
+  "model-schema": [
+    {"name": "AGE", "type": "decimal(31,6)"},
+    {"name": "SEX", "type": "string"},
+    {"name": "BP", "type": "string"},
+    {"name": "CHOLESTEROL", "type": "string"},
+    {"name": "NA", "type": "decimal(31,6)"},
+    {"name": "K", "type": "decimal(31,6)"}
+  ],
+  "model-input": [
+    {"id": 0, "name": "Patient A", "patient_id": "1113121", "features": [43,"M","HIGH","HIGH",0.656371,0.046979]},
+    {"id": 1, "name": "Patient B", "patient_id": "1124321", "features": [64,"M","HIGH","NORMAL",0.739914,0.035349]},
+    {"id": 2, "name": "Patient C", "patient_id": "1121942", "features": [22,"F","NORMAL","HIGH",0.676901,0.078647]}
+  ]
+}
