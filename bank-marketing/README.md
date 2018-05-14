@@ -16,4 +16,4 @@ The classification goal is to predict if the client will subscribe a term deposi
 
 Using machine learning algorithms to build classification models that predict if the client will subscribe a term deposit. The model was built on SPSS Modeler on IBM Data Science Experience and/or IBM Watson Studio.
 
-![](https://github.com/mlhubca/app/blob/master/bank-marketing/app.png)
+![](https://github.com/mlhubca/app/blob/master/bank-marketing/images/app.png)
