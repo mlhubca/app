@@ -1,16 +1,19 @@
-## Drug Trial Prediction
+## Predict the Success of Bank Telemarketing
 
 ### Problem
-A number of hospital patients all suffering from the same illness were treated with a range of drugs
-5 different drugs were available and the different patients responded differently to the different drugs
-Problem - which drug is appropriate for any given future patient?
+
+The data is related with direct marketing campaigns of a banking institution. The marketing campaigns were based on phone calls. The dataset has 4521 rows and 17 columns. The input variables (16 columns) include:
+   - Client data: age, job, marital, education, load info
+   - Last contact of the current campaign: contact type, when, duration
+   - Other attributes: number of contacts of current campaign, number of contacts of previous campaign, outcome of previous campaign
+
+The output variable (desired target):
+  - subscribed: has the client subscribed a term deposit? (binary: ‘yes’, ‘no’)
+
+The classification goal is to predict if the client will subscribe a term deposit.
 
 ### Solution
-Using machine learning neural network and C5.0 algorithms to build classification models that predict the correct type of drug for a patient based on various health metrics.
 
+Using machine learning algorithms to build classification models that predict if the client will subscribe a term deposit. The model was built on SPSS Modeler on IBM Data Science Experience and/or IBM Watson Studio.
 
-![](https://github.com/mlhubca/app/blob/master/drug-trial/images/app.png)
-
-The model was built on SPSS Modeler on IBM Data Science Experience and/or IBM Watson Studio.
-
-![](https://github.com/mlhubca/lab/blob/master/drug//drug-trails.png)
+![](https://github.com/mlhubca/app/blob/master/bank-marketing/app.png)
