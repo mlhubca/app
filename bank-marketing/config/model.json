@@ -1,0 +1,25 @@
+{
+  "model-schema": [
+    {"name": "age", "type": "decimal(31,6)"},
+    {"name": "job", "type": "string"},
+    {"name": "marital", "type": "string"},
+    {"name": "education", "type": "string"},
+    {"name": "default", "type": "decimal(31,6)"},
+    {"name": "balance", "type": "decimal(31,6)"},
+    {"name": "housing", "type": "decimal(31,6)"},
+    {"name": "loan", "type": "decimal(31,6)"},
+    {"name": "contact", "type": "decimal(31,6)"},
+    {"name": "day", "type": "decimal(31,6)"},
+    {"name": "month", "type": "decimal(31,6)"},
+    {"name": "duration", "type": "decimal(31,6)"},
+    {"name": "campaign", "type": "decimal(31,6)"},
+    {"name": "pdays", "type": "decimal(31,6)"},
+    {"name": "previous", "type": "decimal(31,6)"},
+    {"name": "poutcome", "type": "decimal(31,6)"}
+  ],
+  "model-input": [
+    {"id": 0, "name": "Mary J.", "customer_id": "1113121", "features": [26,"services","married","secondary","no",4789,"yes","yes","cellular",11,"may",220,1,339,4,"failure"]},
+    {"id": 1, "name": "John G.", "customer_id": "1124321", "features": [68,"retired","divorced","secondary","no",4189,"no","no","telephone",14,"jul",897,2,-1,0,"unknown"]},
+    {"id": 2, "name": "Tom B.", "customer_id": "1121942", "features": [33,"management","married","secondary","no",3935,"yes","no","cellular",6,"may",765,1,342,2,"success"]}
+  ]
+}
