@@ -1,0 +1,15 @@
+{
+  "port": 3010,
+  "appname": "Cognitive Bank",
+  "description": "A demo app for IBM AI",
+  "wml_credentials": [
+    {
+      "url": "https://ibm-watson-ml.mybluemix.net",
+      "access_key": "***",
+      "username": "***",
+      "password": "***",
+      "instance_id": "***"
+    }
+  ],
+  "scoring_url": "***"
+}
